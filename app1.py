@@ -87,8 +87,8 @@ def fetch_pets(access_token, location="10001", limit=10, pet_type="dog"):
 
 # load pets from API into local database
 def load_pets_from_api():
-    api_key = "huFpETuj3BdRmCo9vxQEGSpJzKlW98WIAG3X8l55pDOM663BMZ"
-    api_secret = "dSc7kA1CkGhOVsfttegQlDSY6JdNHvz8Qxmgr9Bo"
+    api_key = "ENTER-KEY-HERE"
+    api_secret = "ENTER-SECRET-HERE"
     #api_key = os.environ.get("PETFINDER_API_KEY")
     #api_secret = os.environ.get("PETFINDER_API_SECRET")
     token = get_access_token(api_key, api_secret)
@@ -255,4 +255,5 @@ if __name__ == '__main__':
 
         # load pets from API
         load_pets_from_api()   #load_sample_pets() testing only   
+
     app.run(debug=True)
