@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Buddy",
+    "image_url": "https://placedog.net/400/300?id=1",
+    "description": "A playful golden retriever who loves to fetch."
+  },
+  {
+    "name": "Whiskers",
+    "image_url": "https://placekitten.com/400/300",
+    "description": "A calm and curious kitten who naps most of the day."
+  },
+  {
+    "name": "Max",
+    "image_url": "https://placedog.net/400/300?id=2",
+    "description": "An energetic beagle who enjoys walks in the park."
+  },
+  {
+    "name": "Luna",
+    "image_url": "https://placekitten.com/401/300",
+    "description": "A shy but sweet cat who loves being brushed."
+  },
+  {
+    "name": "Charlie",
+    "image_url": "https://placedog.net/400/300?id=3",
+    "description": "A loyal labrador with a heart of gold."
+  },
+  {
+    "name": "Mochi",
+    "image_url": "https://placekitten.com/402/300",
+    "description": "A fluffy kitten with a playful personality and a tiny meow."
+  }
+]
