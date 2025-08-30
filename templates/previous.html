@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Previous</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <ul class="navbar">
+            <li><a href = "/"> Home </a></li>
+            <li><a href = "/hearted"> Favorites </a></li>
+            <li><a href = "/previous"> Previous </a></li>
+            <li><a href = "/filter"> Filter </a></li>
+        </ul>
+    </header>
+
+    <h1>Previous Pets</h1>
+
+    {% if skipped_pets %}
+    <div class="pet-list">
+        {% for pet in skipped_pets %}
+        <div class="pet-card" id = "pet-{{ pet.id }}">
+            <img src="{{ pet.image_url }}" alt="{{ pet.name }}">
+            <h3>{{ pet.name }}</h3>
+            <p class = bubble>Gender: {{ pet.gender }} </p>
+            <p class = bubble> Age: {{ pet.age }} </p> <p class = bubble>Size: {{ pet.size }}</p>  
+            <p>{{ pet.description }}</p>
+
+            <!--<form action="/adopt/{{ pet.id }}" method="POST" style="display:inline;">
+                <button type="submit" class="btn btn-success me-2">❤️</button>
+            </form> -->
+
+            <div class="btns">
+                <a href="#" class="btn btn-success heart-btn" data-pet-id="{{ pet.id }}">❤️</a>
+                <a href="/pet/{{ pet.id }}"> More</a>
+                <!-- <a href="/adopt/{{ pet.id }}" class="btn btn-success me-2">❤️ </a>-->
+            </div> 
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+        <p>You haven't skipped any pets yet!</p>
+    {% endif %}
+
+    <a href="/" class="btn btn-outline-primary mt-4">Back to Home</a>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
